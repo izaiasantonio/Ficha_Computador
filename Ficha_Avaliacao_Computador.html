@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Ficha de Avaliação de Computador</title>
+</head>
+<body>
+<div class="container">
+<h1>Ficha Completa de Avaliação de Computador</h1>
+<div class="no-print"><button onclick="window.print()">Imprimir</button></div>
+
+<!-- IDENTIFICAÇÃO -->
+<fieldset><legend>1. Identificação Geral</legend>
+<div class="grid">
+<div class="form-group"><label>Data</label><input type="date"></div>
+<div class="form-group"><label>Técnico Responsável</label><input></div>
+<div class="form-group"><label>Empresa / Setor</label><input></div>
+<div class="form-group"><label>Tipo</label><select><option>Desktop</option><option>Notebook</option></select></div>
+<div class="form-group"><label>Marca</label><input></div>
+<div class="form-group"><label>Modelo</label><input></div>
+<div class="form-group"><label>Nº Série / Patrimônio</label><input></div>
+<div class="form-group"><label>Sistema Operacional</label><input></div>
+<div class="form-group"><label>Arquitetura</label><select><option>64 bits</option><option>32 bits</option></select></div>
+</div>
+</fieldset>
+
+<!-- CPU -->
+<fieldset><legend>2. Processador (CPU)</legend>
+<div class="grid">
+<div class="form-group"><label>Fabricante</label><input></div>
+<div class="form-group"><label>Modelo</label><input></div>
+<div class="form-group"><label>Geração</label><input></div>
+<div class="form-group"><label>Frequência Base / Turbo</label><input></div>
+<div class="form-group"><label>Núcleos</label><input></div>
+<div class="form-group"><label>Threads</label><input></div>
+<div class="form-group"><label>Soquete</label><input></div>
+</div>
+</fieldset>
+
+<!-- PLACA MAE -->
+<fieldset><legend>3. Placa-mãe</legend>
+<div class="grid">
+<div class="form-group"><label>Fabricante</label><input></div>
+<div class="form-group"><label>Modelo</label><input></div>
+<div class="form-group"><label>Chipset</label><input></div>
+<div class="form-group"><label>Versão BIOS</label><input></div>
+<div class="form-group"><label>Formato</label><input></div>
+</div>
+</fieldset>
+
+<!-- MEMORIA -->
+<fieldset><legend>4. Memória RAM</legend>
+<div class="grid">
+<div class="form-group"><label>Capacidade Total</label><input></div>
+<div class="form-group"><label>Quantidade de Pentes</label><input></div>
+<div class="form-group"><label>Tipo (DDR)</label><input></div>
+<div class="form-group"><label>Frequência</label><input></div>
+<div class="form-group"><label>Slots Livres</label><input></div>
+</div>
+</fieldset>
+
+<!-- ARMAZENAMENTO DINAMICO -->
+<fieldset>
+<legend>5. Armazenamento</legend>
+<div id="armazenamentos"></div>
+<button type="button" class="no-print" onclick="adicionarArmazenamento()">➕ Adicionar unidade</button>
+</fieldset>
+
+<!-- GPU -->
+<fieldset><legend>6. Placa de Vídeo</legend>
+<div class="grid">
+<div class="form-group"><label>Tipo</label><select><option>Integrada</option><option>Dedicada</option></select></div>
+<div class="form-group"><label>Fabricante</label><input></div>
+<div class="form-group"><label>Modelo</label><input></div>
+<div class="form-group"><label>Memória</label><input></div>
+</div>
+</fieldset>
+
+<!-- FONTE -->
+<fieldset><legend>7. Fonte e Refrigeração</legend>
+<div class="grid">
+<div class="form-group"><label>Fonte (Marca / Watts)</label><input></div>
+<div class="form-group"><label>Certificação</label><input></div>
+<div class="form-group"><label>Cooler CPU</label><input></div>
+<div class="form-group"><label>Ventoinhas Gabinete</label><input></div>
+</div>
+</fieldset>
+
+<!-- REDE -->
+<fieldset><legend>8. Conectividade e Portas</legend>
+<div class="grid">
+<div class="form-group"><label>Ethernet</label><input></div>
+<div class="form-group"><label>Wi-Fi</label><input></div>
+<div class="form-group"><label>Bluetooth</label><input></div>
+<div class="form-group"><label>USB / HDMI / DP</label><input></div>
+</div>
+</fieldset>
+
+<!-- TESTES -->
+<fieldset><legend>9. Testes Realizados</legend><textarea></textarea></fieldset>
+
+<!-- OBS -->
+<fieldset><legend>10. Observações Técnicas</legend><textarea></textarea></fieldset>
+
+<!-- CONCLUSAO -->
+<fieldset><legend>11. Conclusão</legend>
+<div class="grid">
+<div class="form-group"><label>Estado Geral</label><select><option>Aprovado</option><option>Aprovado com ressalvas</option><option>Reprovado</option></select></div>
+<div class="form-group"><label>Recomendações</label><input></div>
+</div>
+</fieldset>
+
+<!-- ASSINATURAS -->
+<fieldset><legend>12. Assinaturas</legend>
+<div class="grid">
+<div class="form-group"><label>Técnico Responsável</label><input></div>
+<div class="form-group"><label>Cliente / Responsável</label><input></div>
+</div>
+</fieldset>
+
+</div>
+
+<script>
+function criarBlocoArmazenamento() {
+  const div = document.createElement('div');
+  div.className = 'armazenamento-item';
+  div.innerHTML = `
+    <div class="grid">
+      <div class="form-group"><label>Tipo</label><select required><option value="">Selecione</option><option>SSD</option><option>HD</option><option>Flash</option></select></div>
+      <div class="form-group"><label>Capacidade</label><input placeholder="Ex: 512 GB"></div>
+      <div class="form-group"><label>Interface</label><input placeholder="SATA / NVMe / USB"></div>
+      <div class="form-group"><label>Estado</label><select><option>Bom</option><option>Regular</option><option>Ruim</option></select></div>
+    </div>
+    <button type="button" class="remover no-print" onclick="removerArmazenamento(this)">🗑 Remover unidade</button>
+    <hr>`;
+  return div;
+}
+function adicionarArmazenamento(){ document.getElementById('armazenamentos').appendChild(criarBlocoArmazenamento()); }
+function removerArmazenamento(b){ b.parentElement.remove(); }
+adicionarArmazenamento();
+</script>
+</body>
+</html>
