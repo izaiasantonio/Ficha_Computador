@@ -47,16 +47,22 @@ label {
 }
 
 input,
-select,
-textarea {
+select{
   padding: 6px;
   border: 1px solid #999;
   border-radius: 3px;
 }
 
 textarea {
-  width: 90vw;                   /* largura fixa relativa à tela */
-  height: 95px;
+  border: none;                  /* remove borda padrão */
+  border-bottom: 1px solid #000; /* só linha inferior */
+  width: 600px;                  /* largura fixa */
+  height: 95px;                  /* altura fixa */
+  padding: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  resize: none;                  /* impede redimensionar */
+  box-sizing: border-box;
 }
 
 .no-print {
