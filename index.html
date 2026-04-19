@@ -60,6 +60,12 @@
 <div class="form-group"><label>Slots Livres</label><input></div>
 </div>
 </fieldset>
+<!-- MEMÓRIA -->
+<fieldset>
+  <legend>4. Memória RAM</legend>
+  <div id="memorias"></div>
+  <button type="button" class="no-print" onclick="adicionarMemoriaRAM()">➕ Adicionar Memória RAM</button>
+</fieldset>
 
 <!-- ARMAZENAMENTO DINAMICO -->
 <fieldset>
@@ -121,6 +127,49 @@
 </fieldset>
 
 </div>
+<script>
+function criarBlocoMemoriaRAM() {
+  const div = document.createElement('div');
+  div.className = 'memoria-item';
+  div.innerHTML = `
+    <div class="grid">
+      <div class="form-group">
+        <label>Fabricante</label>
+        <input placeholder="Ex: Kingston, Corsair">
+      </div>
+      <div class="form-group">
+        <label>Capacidade</label>
+        <input placeholder="Ex: 8 GB">
+      </div>
+      <div class="form-group">
+        <label>Frequência</label>
+        <input placeholder="Ex: 3200 MHz">
+      </div>
+      <div class="form-group">
+        <label>Estado</label>
+        <select>
+          <option>Bom</option>
+          <option>Regular</option>
+          <option>Ruim</option>
+        </select>
+      </div>
+    </div>
+    <button type="button" class="remover no-print" onclick="removerMemoriaRAM(this)">🗑 Remover módulo</button>
+    <hr>`;
+  return div;
+}
+
+function adicionarMemoriaRAM() {
+  document.getElementById('memorias').appendChild(criarBlocoMemoriaRAM());
+}
+
+function removerMemoriaRAM(botao) {
+  botao.parentElement.remove();
+}
+
+// já inicia com um bloco
+adicionarMemoriaRAM();
+</script>
 
 <script>
 function criarBlocoArmazenamento() {
