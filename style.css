@@ -56,7 +56,7 @@ select{
 textarea {
   border: none;                  /* remove borda padrão */
   border-bottom: 1px solid #000; /* só linha inferior */
-  width: 600px;                  /* largura fixa */
+  width: 90%;                  /* largura fixa */
   height: 95px;                  /* altura fixa */
   padding: 8px;
   font-family: Arial, sans-serif;
