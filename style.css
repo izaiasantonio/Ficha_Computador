@@ -108,14 +108,16 @@ hr {
     border-bottom: 1px solid #000;
   }
  textarea {
-  border-bottom: 1px solid #000; /* linha inferior preta */
-  width: 90vw;                   /* ocupa 90% da largura da tela */
+  border: none;                  /* remove borda padrão */
+  border-bottom: 1px solid #000; /* só linha inferior */
+  width: 90vw;                   /* largura fixa relativa à tela */
   height: 95px;                  /* altura fixa */
-  resize: vertical;              /* permite redimensionar só na vertical */
   padding: 8px;                  /* espaço interno */
-  font-family: Arial, sans-serif;/* fonte legível */
-  font-size: 14px;               /* tamanho da fonte */
-  }
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  resize: none;                  /* impede redimensionar */
+  box-sizing: border-box;        /* garante que padding não estoure largura */
+}
 
   fieldset {
     page-break-inside: avoid;
