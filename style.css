@@ -102,10 +102,15 @@ hr {
   }
 
   input,
-  select,
+  select{
+    border: none;
+    border-bottom: 1px solid #000;
+  }
   textarea {
     border: none;
     border-bottom: 1px solid #000;
+    width: 100%;
+
   }
 
   fieldset {
