@@ -107,16 +107,9 @@ hr {
     border: none;
     border-bottom: 1px solid #000;
   }
- textarea {
-  border: none;                  /* remove borda padrão */
-  border-bottom: 1px solid #000; /* só linha inferior */
-  width: 90vw;                   /* largura fixa relativa à tela */
-  height: 95px;                  /* altura fixa */
-  padding: 8px;                  /* espaço interno */
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  resize: none;                  /* impede redimensionar */
-  box-sizing: border-box;        /* garante que padding não estoure largura */
+textarea {
+width: 600px;
+height: 95px;      /* garante que padding não estoure largura */
 }
 
   fieldset {
