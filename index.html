@@ -134,24 +134,24 @@ function criarBlocoMemoriaRAM() {
   div.innerHTML = `
     <div class="grid">
       <div class="form-group">
-        <label>Fabricante</label>
-        <input placeholder="Ex: Kingston, Corsair">
+        <label>Capacidade Total</label>
+        <input placeholder="Ex: 16 GB">
       </div>
       <div class="form-group">
-        <label>Capacidade</label>
-        <input placeholder="Ex: 8 GB">
+        <label>Quantidade de Pentes</label>
+        <input placeholder="Ex: 2">
+      </div>
+      <div class="form-group">
+        <label>Tipo (DDR)</label>
+        <input placeholder="Ex: DDR4">
       </div>
       <div class="form-group">
         <label>Frequência</label>
         <input placeholder="Ex: 3200 MHz">
       </div>
       <div class="form-group">
-        <label>Estado</label>
-        <select>
-          <option>Bom</option>
-          <option>Regular</option>
-          <option>Ruim</option>
-        </select>
+        <label>Slots Livres</label>
+        <input placeholder="Ex: 1">
       </div>
     </div>
     <button type="button" class="remover no-print" onclick="removerMemoriaRAM(this)">🗑 Remover módulo</button>
