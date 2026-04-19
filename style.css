@@ -107,11 +107,14 @@ hr {
     border: none;
     border-bottom: 1px solid #000;
   }
-  textarea {
-    border-bottom: 1px solid #000;
-    width: 90vw;
-    height: 95px;
-
+ textarea {
+  border-bottom: 1px solid #000; /* linha inferior preta */
+  width: 90vw;                   /* ocupa 90% da largura da tela */
+  height: 95px;                  /* altura fixa */
+  resize: vertical;              /* permite redimensionar só na vertical */
+  padding: 8px;                  /* espaço interno */
+  font-family: Arial, sans-serif;/* fonte legível */
+  font-size: 14px;               /* tamanho da fonte */
   }
 
   fieldset {
