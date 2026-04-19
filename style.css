@@ -54,7 +54,7 @@ select{
 }
 
 textarea {
-  border: none;                  /* remove borda padrão */
+  border: 1px solid #999;
   border-bottom: 1px solid #000; /* só linha inferior */
   width: 90%;                  /* largura fixa */
   height: 95px;                  /* altura fixa */
