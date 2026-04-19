@@ -56,9 +56,9 @@ select{
 textarea {
   border: 1px solid #999;
   border-bottom: 1px solid #000; /* só linha inferior */
-  width: 90%;                  /* largura fixa */
+  width: 95%;                  /* largura fixa */
   height: 95px;                  /* altura fixa */
-  padding: 8px;
+  padding: 6px;
   font-family: Arial, sans-serif;
   font-size: 14px;
   resize: none;                  /* impede redimensionar */
