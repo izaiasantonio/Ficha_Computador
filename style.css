@@ -55,6 +55,7 @@ select{
 
 textarea {
   border: 1px solid #999;
+  border-radius: 3px;
   border-bottom: 1px solid #000; /* só linha inferior */
   width: 100%;                  /* largura fixa */
   height: 95px;                  /* altura fixa */
