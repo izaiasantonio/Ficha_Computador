@@ -84,8 +84,8 @@ button {
   border-radius: 4px;
 }
 button:hover {
-  background: #CBCBCB;
-  color: #fff;
+  color: #fcfcfc;
+  background-color: #0c1c33c7;
   cursor: pointer;
 }
 
