@@ -6,7 +6,7 @@
 body {
   margin: 0 auto;
   padding: 20px;
-  background-image: url("https://raw.githubusercontent.com/izaiasantonio/HelpDesk/refs/heads/main/imagens/imagens-logo/bkg-login.png?token=GHSAT0AAAAAAD2OPBLPSI2DNTW5FLGTTOSE2PIYPPA");
+  background-image: url("bkg-login.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center center;
