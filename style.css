@@ -6,7 +6,7 @@
 body {
   margin: 0 auto;
   padding: 20px;
-  background-image: url("bkg-login.png");
+  background: url('/bkg-login.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center center;
