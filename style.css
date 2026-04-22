@@ -84,7 +84,9 @@ button {
   border-radius: 4px;
 }
 button:hover {
-  color: #CBCBCB;
+  background: #CBCBCB;
+  color: #fff;
+  cursor: pointer;
 }
 
 button.remover {
