@@ -14,7 +14,9 @@ body {
 }
 @media (max-width: 600px) {
   body {
-    background: #3498db; /* Substitua pela cor que desejar */
+    margin: 0 auto;
+    padding: 0;
+    /* background: #3498db;  Substitua pela cor que desejar */
   }
 }
 
