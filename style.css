@@ -83,7 +83,7 @@ button {
   cursor: pointer;
   border-radius: 4px;
 }
-button :hover {
+button:hover {
   color: #CBCBCB;
 }
 
